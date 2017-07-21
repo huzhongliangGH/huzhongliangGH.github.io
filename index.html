@@ -266,6 +266,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/02/var-let-和const/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="胡中亮">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/monkey.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Personal Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/03/02/var-let-和const/" itemprop="url">var let 和const</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-02T00:00:00+08:00">
+                2016-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology-Extension/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology Extension</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="需要弃用-var-改用-let-么？"><a href="#需要弃用-var-改用-let-么？" class="headerlink" title="需要弃用 var 改用 let 么？"></a>需要弃用 <code>var</code> 改用 <code>let</code> 么？</h1><h2 id="在能使用-ES6-的前提下，新写的代码是否该使用-let-并弃用-var？"><a href="#在能使用-ES6-的前提下，新写的代码是否该使用-let-并弃用-var？" class="headerlink" title="在能使用 ES6 的前提下，新写的代码是否该使用 let 并弃用 var？"></a>在能使用 ES6 的前提下，新写的代码是否该使用 <code>let</code> 并弃用 <code>var</code>？</h2><pre><code>1. 功能上，`var` 能做到的，`let` 都能做到；
+2. `let` 声明的变量的作用域相对直观；
+3. 为了编码风格的一致，不用纠结当前该用 `let` 还是 `var`（反正我是有纠结过）；
+
+ps:单引号写在{}外，每个属性都必须双引号，否则会抛出异常
+</code></pre><h2 id="简单回答：是的，在-ES6-不要使用-var，用-let-或-const-代替。"><a href="#简单回答：是的，在-ES6-不要使用-var，用-let-或-const-代替。" class="headerlink" title="简单回答：是的，在 ES6 不要使用 var，用 let 或 const 代替。"></a>简单回答：是的，在 ES6 不要使用 var，用 let 或 const 代替。</h2><pre><code>var 在一定程度上存在缺陷，其实在 strong mode 下使用 var 会直接报 SyntaxErrorhttps://docs.google.com/document/d/1Qk0qC4s_XNCLemj42FqfsRLp49nDQMZ1y7fwf5YjaI4/mobilebasic?pli=1#h.26d4x5sphhty最简单的方式就是全局替换成 let，但建议注意一下 const。let 和 const 区别并不大，const 为常量，let 为变量。我的使用方式是只要定义的不会改变就用 const，然后你会发现大部分使用的是 const。
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/24/Jcrop-图像裁剪/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1429,7 +1568,7 @@ ps:单引号写在{}外，每个属性都必须双引号，否则会抛出异常
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1440,7 +1579,7 @@ ps:单引号写在{}外，每个属性都必须双引号，否则会抛出异常
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1451,7 +1590,7 @@ ps:单引号写在{}外，每个属性都必须双引号，否则会抛出异常
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
